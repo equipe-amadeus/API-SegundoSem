@@ -1,0 +1,5 @@
+-Dfile.encoding=Cp1252
+-p
+"C:\\Users\\evert\\Downloads\\openjfx-19-ea+3_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.base.jar;C:\\Users\\evert\\Downloads\\openjfx-19-ea+3_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.controls.jar;C:\\Users\\evert\\Downloads\\openjfx-19-ea+3_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.fxml.jar;C:\\Users\\evert\\Downloads\\openjfx-19-ea+3_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.graphics.jar;C:\\Users\\evert\\Downloads\\openjfx-19-ea+3_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.media.jar;C:\\Users\\evert\\Downloads\\openjfx-19-ea+3_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.swing.jar;C:\\Users\\evert\\Downloads\\openjfx-19-ea+3_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.web.jar;C:\\Users\\evert\\Downloads\\openjfx-19-ea+3_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx-swt.jar;C:\\Users\\evert\\eclipse-workspace\\exercicosfx\\bin"
+-m
+exercicosfx/exercicosfx.Primeirofx
