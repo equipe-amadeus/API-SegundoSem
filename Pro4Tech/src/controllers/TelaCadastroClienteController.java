@@ -10,6 +10,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.text.ParseException;
+
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 
@@ -22,29 +28,60 @@ public class TelaCadastroClienteController extends BaseController{
 		// TODO Auto-generated constructor stub
 	}
 
-	  @FXML
-	    private Button botao1;
-	    @FXML
-	    private Button botao2;
-	    @FXML
-	    private GridPane grid1 ;
-	    @FXML
-	    private GridPane grid2 ;
 
 	    @FXML
-	    void teste(ActionEvent event) {
-	    	grid1.setVisible(false);
-	    	grid1.managedProperty().bind(grid1.visibleProperty());
+	    private Button botao1;
+
+	    @FXML
+	    private Button botao2;
+
+	    @FXML
+	    private Button cadastrarButton;
+
+	    @FXML
+	    private TextField cargoTextArea;
+
+	    @FXML
+	    private TextField emailTextField;
+
+	    @FXML
+	    private TextField empresaTextField;
+
+	    @FXML
+	    private TextField nomeTextField;
+
+	    @FXML
+	    private TextField numeroTextField;
+
+	    @FXML
+	    private TextField projetoTextField;
+
+	    @FXML
+	    void cadastrarCliente(ActionEvent event) throws ParseException {
 	    	
-	    	grid2.setVisible(true);
-	    	grid2.managedProperty().bind(grid2.visibleProperty());
+	    
+	    
+	    }}
+	    	
+	    
+	   
+	    
+
+	   
+
+	   // @FXML
+	    //void test(ActionEvent event) {
+	    	//grid1.setVisible(false);
+	    	//grid1.managedProperty().bind(grid1.visibleProperty());
+	    	
+	    	//grid2.setVisible(true);
+	    	//grid2.managedProperty().bind(grid2.visibleProperty());
 	    
 	    	//grid1.managedProperty().bind(grid1.visibleProperty());
 
-	    }
+	    
 
 
 	 
 
 
-}
