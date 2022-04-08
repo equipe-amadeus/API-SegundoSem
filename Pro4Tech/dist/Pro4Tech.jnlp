@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Pro4Tech.jnlp">
+    <information>
+        <title>Pro4Tech</title>
+        <vendor>lobat</vendor>
+        <description>null</description>
+        <offline-allowed/>
+    </information>
+    <update check="always"/>
+    <resources>
+        <j2se version="9.0.4+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="Pro4Tech.jar" size="62508" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="800" height="600" main-class="fxml.AppFxml" name="AppFxml"/>
+</jnlp>
+

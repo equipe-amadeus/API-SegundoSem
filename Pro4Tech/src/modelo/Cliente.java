@@ -25,13 +25,13 @@ public class Cliente {
 		return nome_empresa;
 	}
 	public void setNome_empresa() {
-		this.Nome_empresa = nome_empresa;
+		this.nome_empresa = nome_empresa;
 	}
 	public String getEmail() {
 		return email;
 	}
-	public void setEmail()) {
-		this.Email = email;
+	public void setEmail() {
+		this.email = email;
 		
 	}
 }
