@@ -18,7 +18,7 @@
    <children>
       <HBox prefHeight="54.0" prefWidth="750.0" style="-fx-background-color: FFB74A;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="botao1" mnemonicParsing="false" onAction="#teste" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFB74A; -fx-background-radius: 20px; -fx-border-radius: 20;" text="Cadastros" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFB74A; -fx-background-radius: 20px; -fx-border-radius: 20;" text="Cadastros" textFill="WHITE">
                <HBox.margin>
                   <Insets right="10.0" top="5.0" />
                </HBox.margin>
@@ -156,32 +156,32 @@
                   </VBox>
                   <VBox prefHeight="330.0" prefWidth="181.0">
                      <children>
-                        <TextField prefHeight="9.0" prefWidth="252.0" style="-fx-background-radius: 100;">
+                        <TextField fx:id="empresaTextField" prefHeight="9.0" prefWidth="252.0" style="-fx-background-radius: 100;">
                            <VBox.margin>
                               <Insets top="15.0" />
                            </VBox.margin>
                         </TextField>
-                        <TextField prefHeight="2.0" style="-fx-background-radius: 100;">
+                        <TextField fx:id="nomeTextField" prefHeight="2.0" style="-fx-background-radius: 100;">
                            <VBox.margin>
                               <Insets top="16.0" />
                            </VBox.margin>
                         </TextField>
-                        <TextField prefHeight="2.0" style="-fx-background-radius: 100;">
+                        <TextField fx:id="emailTextField" prefHeight="2.0" style="-fx-background-radius: 100;">
                            <VBox.margin>
                               <Insets top="17.0" />
                            </VBox.margin>
                         </TextField>
-                        <TextField prefHeight="2.0" prefWidth="254.0" style="-fx-background-radius: 100;">
+                        <TextField fx:id="cargoTextArea" prefHeight="2.0" prefWidth="254.0" style="-fx-background-radius: 100;">
                            <VBox.margin>
                               <Insets top="15.0" />
                            </VBox.margin>
                         </TextField>
-                        <TextField prefHeight="2.0" style="-fx-background-radius: 100;">
+                        <TextField fx:id="projetoTextField" prefHeight="2.0" style="-fx-background-radius: 100;">
                            <VBox.margin>
                               <Insets top="14.0" />
                            </VBox.margin>
                         </TextField>
-                        <TextField prefHeight="2.0" style="-fx-background-radius: 100;">
+                        <TextField fx:id="numeroTextField" prefHeight="2.0" style="-fx-background-radius: 100;">
                            <VBox.margin>
                               <Insets top="15.0" />
                            </VBox.margin>
@@ -193,7 +193,7 @@
                   </VBox>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" style="-fx-background-color: ffb848; -fx-background-radius: 5;" text="Cadastrar" textFill="WHITE">
+            <Button fx:id="cadastrarButton" mnemonicParsing="false" onAction="#cadastrarCliente" style="-fx-background-color: ffb848; -fx-background-radius: 5;" text="Cadastrar" textFill="WHITE">
                <VBox.margin>
                   <Insets left="300.0" />
                </VBox.margin>

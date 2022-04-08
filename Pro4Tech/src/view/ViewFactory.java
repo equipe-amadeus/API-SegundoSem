@@ -24,7 +24,9 @@ public class ViewFactory{
 		initializeStage(controller);
     } 
 	public void showMainWindow() throws IOException {
+
 	BaseController controller = new TelaCadastroClienteController(emailManager, this.viewFactory, "TelaCadastroMensagem.fxml");
+
 	initializeStage(controller);
     }
 	
