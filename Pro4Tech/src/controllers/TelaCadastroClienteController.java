@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 import java.sql.Connection;
@@ -27,13 +28,25 @@ public class TelaCadastroClienteController extends BaseController{
 		super(emailManager, viewFactory, fxmlName);
 		// TODO Auto-generated constructor stub
 	}
-
+	   @FXML
+	    private VBox cadastroCliente;
+	   @FXML
+	    private VBox cadastroMensagens;
 
 	    @FXML
 	    private Button botao1;
 
 	    @FXML
 	    private Button botao2;
+	    
+	    @FXML
+	    private Button botaoCM;
+
+	    @FXML
+	    private Button botaoCC;
+
+	    @FXML
+	    private Button botaoCE;
 
 	    @FXML
 	    private Button cadastrarButton;
@@ -57,11 +70,33 @@ public class TelaCadastroClienteController extends BaseController{
 	    private TextField projetoTextField;
 
 	    @FXML
-	    void cadastrarCliente(ActionEvent event) throws ParseException {
-	    	
-	    
-	    
+	    void acaoCC(ActionEvent event) {
+	    	cadastroCliente.setVisible(true);
+	    	cadastroCliente.managedProperty().bind(cadastroCliente.visibleProperty());
+	      	cadastroMensagens.setVisible(false);
+	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
+
+	    }
+
+	    @FXML
+	    void acaoCE(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void acaoCM(ActionEvent event) {
+	      	cadastroCliente.setVisible(false);
+	    	cadastroCliente.managedProperty().bind(cadastroCliente.visibleProperty());
+	      	cadastroMensagens.setVisible(true);
+	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
+
+	    }
+
+	    @FXML
+	    void cadastrarCliente(ActionEvent event) {
+
 	    }}
+	    
 	    	
 	    
 	   

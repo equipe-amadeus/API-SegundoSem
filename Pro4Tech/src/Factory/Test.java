@@ -13,10 +13,10 @@ public class Test {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws SQLException{
+    public Test() {
         // TODO code application logic here
-        Connection connection = new ConnectionFactory().getConnection();
-        System.out.println("conexao aberta");
-        connection.close();
-    }
+      //  Connection connection = new ConnectionFactory().getConnection();
+        //System.out.println("conexao aberta");
+        //connection.close();
+    };
 }
