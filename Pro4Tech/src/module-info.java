@@ -13,6 +13,7 @@ module Pro4Tech {
 	opens controllers;
 	opens view;
 	opens Factory;
+	opens Dao;
 
 	
 }
