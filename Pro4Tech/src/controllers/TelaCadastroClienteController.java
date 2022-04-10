@@ -47,6 +47,8 @@ public class TelaCadastroClienteController extends BaseController{
 
 	    @FXML
 	    private Button botaoCE;
+	    @FXML
+	    private Button btncadastrarMensagens;
 
 	    @FXML
 	    private Button cadastrarButton;
@@ -68,7 +70,7 @@ public class TelaCadastroClienteController extends BaseController{
 
 	    @FXML
 	    private TextField projetoTextField;
-
+       //Botao de mjudar telas
 	    @FXML
 	    void acaoCC(ActionEvent event) {
 	    	cadastroCliente.setVisible(true);
@@ -91,11 +93,17 @@ public class TelaCadastroClienteController extends BaseController{
 	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
 
 	    }
+	    //fim da acao
 
 	    @FXML
 	    void cadastrarCliente(ActionEvent event) {
 
-	    }}
+	    }
+	    @FXML
+	    void cadastrarMensagens(ActionEvent event) {
+
+	    }
+	    }
 	    
 	    	
 	    
