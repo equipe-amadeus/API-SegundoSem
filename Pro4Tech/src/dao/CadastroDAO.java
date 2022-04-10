@@ -1,7 +1,8 @@
 
-package dao;
+package Dao;
 
 import Factory.ConnectionFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

@@ -1,6 +1,6 @@
 package controllers;
 
-import dao.CadastroDAO;
+import Dao.CadastroDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

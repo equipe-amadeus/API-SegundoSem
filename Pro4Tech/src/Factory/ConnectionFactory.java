@@ -1,5 +1,6 @@
 package Factory;
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -10,10 +11,10 @@ import javax.swing.JOptionPane;
  */
 public class ConnectionFactory {
     public Connection conectaBD(){     
-        Connection conn = null;
+        Connection conn= null;
         
         try {
-            String url = "jdbc:mysql//localhost:3306/pro4tech?user=root&password=Globogelo@123";
+            String url = "jdbc:mysql://localhost:3306/pro4tech?user=root&password= Ton369811";
             conn = DriverManager.getConnection(url);
             
         } catch (SQLException erro) {
