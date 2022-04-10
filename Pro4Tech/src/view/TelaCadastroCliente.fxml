@@ -14,10 +14,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: edf0f5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-=======
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: edf0f5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <VBox fx:id="cadastroCliente" layoutX="246.0" layoutY="128.0" prefHeight="397.0" prefWidth="407.0" style="-fx-background-color: e5e5e5; -fx-background-radius: 20;">
          <effect>
@@ -136,7 +132,6 @@
             </Button>
          </children>
       </VBox><children>
->>>>>>> 51704a8cbbc6661430f4bd3acce53aa62054bd8d
       <HBox prefHeight="54.0" prefWidth="750.0" style="-fx-background-color: FFB74A;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFB74A; -fx-background-radius: 20px; -fx-border-radius: 20;" text="Cadastros" textFill="WHITE">
@@ -218,11 +213,7 @@
             </Label>
             <HBox prefHeight="154.0" prefWidth="406.0">
                <children>
-<<<<<<< HEAD
-                  <VBox prefHeight="330.0" prefWidth="150.0">
-=======
                   <VBox prefHeight="154.0" prefWidth="195.0">
->>>>>>> 51704a8cbbc6661430f4bd3acce53aa62054bd8d
                      <children>
                         <Label text="Categoria">
                            <VBox.margin>
@@ -348,11 +339,7 @@
                               <Insets left="15.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-<<<<<<< HEAD
-                        <Label prefHeight="20.0" prefWidth="206.0" text="Número de telefone">
-=======
                         <Label prefHeight="20.0" prefWidth="124.0" text="Projeto">
->>>>>>> 51704a8cbbc6661430f4bd3acce53aa62054bd8d
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -362,7 +349,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <VBox prefHeight="330.0" prefWidth="181.0">
+                  <VBox prefHeight="330.0" prefWidth="246.0">
                      <children>
                         <TextField fx:id="nomeEmpresa" prefHeight="9.0" prefWidth="252.0" style="-fx-background-radius: 100;">
                            <VBox.margin>
@@ -380,9 +367,6 @@
                            </VBox.margin>
                         </TextField>
                      </children>
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin>
                   </VBox>
                </children>
             </HBox>
