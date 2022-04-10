@@ -1,5 +1,6 @@
 package controllers;
 
+import dao.CadastroDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -21,6 +22,7 @@ import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 
 import fxml.EmailManager;
+import modelo.Cadastro;
 
 public class TelaCadastroClienteController extends BaseController{
 
@@ -36,7 +38,7 @@ public class TelaCadastroClienteController extends BaseController{
 	   @FXML
 	    private VBox cadastroEmpresa;
 	   
-	   //botões do menu
+	   //botï¿½es do menu
 
 	    @FXML
 	    private Button botao1;
@@ -44,7 +46,7 @@ public class TelaCadastroClienteController extends BaseController{
 	    @FXML
 	    private Button botao2;
 	    
-	    //botões para mudar de acão
+	    //botï¿½es para mudar de acï¿½o
 	    
 	    @FXML
 	    private Button botaoCM;
@@ -55,7 +57,7 @@ public class TelaCadastroClienteController extends BaseController{
 	    @FXML
 	    private Button botaoCE;
 	    
-	    //botôes para cadastrar 
+	    //botï¿½es para cadastrar 
 	    @FXML
 	    private Button btncadastrarMensagens;
 
@@ -95,7 +97,7 @@ public class TelaCadastroClienteController extends BaseController{
 	    private TextField textNome;
 
 	    @FXML
-	    private TextField textMeioDeComunicação;
+	    private TextField textMeioDeComunicao;
 	    
 	    //Area de texto tela cadastroEmpresa
 	    @FXML
@@ -148,10 +150,31 @@ public class TelaCadastroClienteController extends BaseController{
 
 	    @FXML
 	    void cadastrarCliente(ActionEvent event) {
+                
+                    String cargo, nome, email, nome_empresa, projetos, whatsapp;
+                    
+                    cargo = cargoTextArea.getText();
+                    nome = nomeTextField.getText();
+                    email = emailTextField.getText();
+                    nome_empresa = empresaTextField.getText();
+                    projetos = projetoTextField.getText();
+                    whatsapp = numeroTextField.getText();
+
+                    Cadastro objcadastro = new Cadastro();
+                    objcadastro.setCargo(cargo);
+                    objcadastro.setNome(nome);
+                    objcadastro.setEmail(email);
+                    objcadastro.setNome_empresa(nome_empresa);
+                    objcadastro.setProjetos(projetos);
+                    objcadastro.setWhatsapp(whatsapp);
+
+                    CadastroDAO objcadastrodao = new CadastroDAO();
+                    objcadastrodao.cadastrar(objcadastro);
 
 	    }
 	    @FXML
 	    void cadastrarMensagens(ActionEvent event) {
+                
 
 	    }
 
