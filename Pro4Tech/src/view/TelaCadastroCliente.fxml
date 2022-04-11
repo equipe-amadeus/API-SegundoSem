@@ -266,7 +266,7 @@
                               <Insets left="10.0" top="20.0" />
                            </VBox.margin>
                         </TextField>
-                        <TextField fx:id="textMeioDeComunicação" minHeight="20.0" style="-fx-background-radius: 100;">
+                        <TextField fx:id="textMeioDeComunicacao" minHeight="20.0" style="-fx-background-radius: 100;">
                            <VBox.margin>
                               <Insets left="10.0" top="20.0" />
                            </VBox.margin>

@@ -1,8 +1,9 @@
 package controllers;
 
+ 
 import Dao.CadastroDAO;
-import dao.Cadastro_empresaDAO;
-import dao.Cadastro_mensagemDAO;
+import Dao.Cadastro_empresaDAO;
+import Dao.Cadastro_mensagemDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -101,14 +102,14 @@ public class TelaCadastroClienteController extends BaseController{
 	    private TextField textNome;
 
 	    @FXML
-	    private TextField textMeioDeComunicao;
+	    private TextField textMeioDeComunicacao;
             
             @FXML
             private TextField textMensagem;
 	    
 	    //Area de texto tela cadastroEmpresa
 	    @FXML
-	    private TextField textNomeEmpresa;
+	    private TextField nomeEmpresa;
 
 	    @FXML
 	    private TextField textResponsavel;
@@ -185,7 +186,7 @@ public class TelaCadastroClienteController extends BaseController{
                     titulo = textTitulo.getText();
                     categoria = textCategoria.getText();
                     nome = textNome.getText();
-                    meio_comunicacao = textMeioDeComunicao.getText();
+                    meio_comunicacao = textMeioDeComunicacao.getText();
                     conteudo = textMensagem.getText();
 
                     Cadastro_mensagem objcadastro_mensagem = new Cadastro_mensagem ();
@@ -200,25 +201,25 @@ public class TelaCadastroClienteController extends BaseController{
 
 	    }
 
-        @FXML
-        void cadastrarEmpresa(ActionEvent event) {
-                    String nome_empresa, responsavel, nome_projeto;
-                    
-                    nome_empresa = textNomeEmpresa.getText();
-                    responsavel = textResponsavel.getText();
-                    nome_projeto = textProjeto.getText();
+            @FXML
+            void cadastrarEmpresa(ActionEvent event) {
+                        String nome_empresa, responsavel, nome_projeto;
 
-                    Cadastro_empresa objcadastro_empresa = new Cadastro_empresa();
-                    objcadastro_empresa.setNome_empresa(nome_empresa);
-                    objcadastro_empresa.setResponsavel(responsavel);
-                    objcadastro_empresa.setNome_projeto(nome_projeto);
-    
+                        nome_empresa = nomeEmpresa.getText();
+                        responsavel = textResponsavel.getText();
+                        nome_projeto = textProjeto.getText();
 
-                    Cadastro_empresaDAO objcadastro_empresadao = new Cadastro_empresaDAO();
-                    objcadastro_empresadao.cadastrar_empresa(objcadastro_empresa);
-            
-            }
-}
+                        Cadastro_empresa objcadastro_empresa = new Cadastro_empresa();
+                        objcadastro_empresa.setNome_empresa(nome_empresa);
+                        objcadastro_empresa.setResponsavel(responsavel);
+                        objcadastro_empresa.setNome_projeto(nome_projeto);
+
+
+                        Cadastro_empresaDAO objcadastro_empresadao = new Cadastro_empresaDAO();
+                        objcadastro_empresadao.cadastrar_empresa(objcadastro_empresa);
+
+                }
+} 
 	    
 	    	
 	    
