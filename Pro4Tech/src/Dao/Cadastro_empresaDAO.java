@@ -22,7 +22,7 @@ public class Cadastro_empresaDAO {
     PreparedStatement pstm;
     
     public void cadastrar_empresa(Cadastro_empresa objcadastro_empresa){
-        String sql = "INSERT INTO empresa(nome_empresa, responsavel, nome_projetos) VALUES(?,?,?)";
+        String sql = "INSERT INTO empresa(nome_empresa, responsavel, nome_projeto) VALUES(?,?,?)";
         
         conn = new ConnectionFactory().conectaBD();
         
