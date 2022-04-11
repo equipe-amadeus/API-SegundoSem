@@ -14,7 +14,7 @@ public class ConnectionFactory {
         Connection conn= null;
         
         try {
-            String url = "jdbc:mysql://localhost:3306/pro4tech?user=root&password= Ton369811";
+            String url = "jdbc:mysql://localhost:3306/pro4tech?user=root&password= Globogelo@123";
             conn = DriverManager.getConnection(url);
             
         } catch (SQLException erro) {

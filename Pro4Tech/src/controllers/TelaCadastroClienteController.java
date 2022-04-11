@@ -1,6 +1,8 @@
 package controllers;
 
 import Dao.CadastroDAO;
+import dao.Cadastro_empresaDAO;
+import dao.Cadastro_mensagemDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,6 +25,8 @@ import javax.swing.JOptionPane;
 
 import fxml.EmailManager;
 import modelo.Cadastro;
+import modelo.Cadastro_empresa;
+import modelo.Cadastro_mensagem;
 
 public class TelaCadastroClienteController extends BaseController{
 
@@ -98,10 +102,13 @@ public class TelaCadastroClienteController extends BaseController{
 
 	    @FXML
 	    private TextField textMeioDeComunicao;
+            
+            @FXML
+            private TextField textMensagem;
 	    
 	    //Area de texto tela cadastroEmpresa
 	    @FXML
-	    private TextField nomeEmpresa;
+	    private TextField textNomeEmpresa;
 
 	    @FXML
 	    private TextField textResponsavel;
@@ -174,15 +181,44 @@ public class TelaCadastroClienteController extends BaseController{
 	    }
 	    @FXML
 	    void cadastrarMensagens(ActionEvent event) {
-                
+                String titulo, categoria, nome, meio_comunicacao, conteudo;
+                    titulo = textTitulo.getText();
+                    categoria = textCategoria.getText();
+                    nome = textNome.getText();
+                    meio_comunicacao = textMeioDeComunicao.getText();
+                    conteudo = textMensagem.getText();
+
+                    Cadastro_mensagem objcadastro_mensagem = new Cadastro_mensagem ();
+                    objcadastro_mensagem.setTitulo(titulo);
+                    objcadastro_mensagem.setCategoria(categoria);
+                    objcadastro_mensagem.setNome(nome);
+                    objcadastro_mensagem.setMeio_comunicacao(meio_comunicacao);
+                    objcadastro_mensagem.setConteudo(conteudo);
+
+                    Cadastro_mensagemDAO objcadastro_mensagemdao = new Cadastro_mensagemDAO();
+                    objcadastro_mensagemdao.cadastrar_mensagem(objcadastro_mensagem);
 
 	    }
 
         @FXML
         void cadastrarEmpresa(ActionEvent event) {
+                    String nome_empresa, responsavel, nome_projeto;
+                    
+                    nome_empresa = textNomeEmpresa.getText();
+                    responsavel = textResponsavel.getText();
+                    nome_projeto = textProjeto.getText();
 
+                    Cadastro_empresa objcadastro_empresa = new Cadastro_empresa();
+                    objcadastro_empresa.setNome_empresa(nome_empresa);
+                    objcadastro_empresa.setResponsavel(responsavel);
+                    objcadastro_empresa.setNome_projeto(nome_projeto);
+    
+
+                    Cadastro_empresaDAO objcadastro_empresadao = new Cadastro_empresaDAO();
+                    objcadastro_empresadao.cadastrar_empresa(objcadastro_empresa);
+            
+            }
 }
-	    }
 	    
 	    	
 	    
