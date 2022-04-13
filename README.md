@@ -21,7 +21,7 @@
 * [Proposta](#Proposta)
 * [Backlog do produto](#Backlog-do-produto)
 * [Entregas](#Entregas)
-* [Tecnologias] (#Tecnologias)
+* [Tecnologias](#Tecnologias)
 
 
 ## Quem Somos 
