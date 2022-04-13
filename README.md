@@ -53,10 +53,23 @@ Centralizar a comunicação entre clientes e empresa. Criar um sistema onde seja
 
 ## Backlog do produto
 
+Tarefa | Prioridade
+:--- | :--- |
+Criação do banco de dados | Alta prioridade
+Criação de interface de cadastro de mensagens | Alta prioridade
+Criação de interface para exibição das mensagens cadastradas | Alta prioridade
+Criação de interface de cadastro de usuários | Média prioridade
+Criação da interface usuário adm | Média prioridade
+Criação da interface inicial | Média prioridade
+Conexão do banco de dados com a interface | Alta prioridade
+
 ## Entregas
 
 * Sprint 1 (25/03/2022 - 14/04/2022)
 
+  - Criação do banco de dados
+  - Conexão do banco de dados com a interface
+  - Criação das interfaces
 
 * Sprint 2 (25/04/2022 - 15/05/2022)
 
