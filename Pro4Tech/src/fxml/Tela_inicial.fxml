@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutY="-4.0" prefHeight="31.0" prefWidth="599.0" style="-fx-background-color: FFAA16;" text="Chat" />
+      <Button layoutX="36.0" layoutY="49.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="97.0" style="-fx-background-radius: 10; -fx-background-color: FFAA16;" text="Empresa" />
+      <Button layoutX="187.0" layoutY="49.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="97.0" style="-fx-background-color: FFAA16; -fx-background-radius: 10;" text="Grupos" />
+   </children>
+</AnchorPane>
