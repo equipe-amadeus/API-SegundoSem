@@ -21,6 +21,7 @@
 * [Proposta](#Proposta)
 * [Backlog do produto](#Backlog-do-produto)
 * [Entregas](#Entregas)
+* [Tecnologias] (#Tecnologias)
 
 
 ## Quem Somos 
@@ -77,3 +78,10 @@ Conexão do banco de dados com a interface | Alta prioridade
 * Sprint 3 (16/05/2022 - 05/06/2022) 
 
 ## Tecnologias Utilizadas  
+
+ <img width="50 rem" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/> CSS3 
+ <img width="50 rem" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/> Figma 
+ <img width="50 rem" src="https://icongr.am/devicon/java-original.svg?size=128&color=currentColor"/> Java
+ <img width="120 rem" src="https://wikiimg.tojsiabtv.com/wikipedia/en/c/cc/JavaFX_Logo.png"/> JavaFx
+ <img width="50 rem" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /> MySQL
+ <img width="50 rem" src="https://gluonhq.com/wp-content/uploads/2015/02/SceneBuilderLogo.png"/> Scene Builder
