@@ -30,7 +30,7 @@ Olá, somos alunos do grupo Amadeus do 2° semestre do curso de Análise e Desen
 
 ## Proposta 
 
-Centralizar a comunicação entre clientes e empresa. Criar um sistema onde seja possível gerenciar os clientes e enviar mensagens.
+Criar um sistema para centralizar a comunicação entre clientes e empresa.
 
 * Requistos funcionais
    ---
@@ -50,8 +50,6 @@ Centralizar a comunicação entre clientes e empresa. Criar um sistema onde seja
   ---
   - [ ] MySQL Workbench.
 
-## User Story
-
 ## Backlog do produto
 
 Tarefa | Prioridade
@@ -59,10 +57,18 @@ Tarefa | Prioridade
 Criação do banco de dados | Alta prioridade
 Criação de interface de cadastro de mensagens | Alta prioridade
 Criação de interface para exibição das mensagens cadastradas | Alta prioridade
+Conexão do banco de dados com a interface | Alta prioridade
 Criação de interface de cadastro de usuários | Média prioridade
 Criação da interface usuário adm | Média prioridade
 Criação da interface inicial | Média prioridade
-Conexão do banco de dados com a interface | Alta prioridade
+
+
+## Interfaces
+<p> Foram criadas interfaces com o objetivo de registrar e visualizar mensagens escritas por clientes. Sendo pedidos de ajuda, relatos de erros na plataforma ou perguntas no geral; Centralizando suas dúvidas em uma única plataforma, facilitando a interação entre fornecedor e cliente. </p>
+<img width= "600"  src="https://github.com/equipe-amadeus/API-SegundoSem/blob/main/gif/interfaces.gif">
+
+## Conexão do banco de dados com a interface
+<img width= "600" src="https://github.com/equipe-amadeus/API-SegundoSem/blob/main/gif/conexaobdinterface.gif">
 
 ## Entregas
 
