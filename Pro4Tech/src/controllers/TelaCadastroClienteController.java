@@ -25,6 +25,8 @@ import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 
 import fxml.EmailManager;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import modelo.Cadastro;
 import modelo.Cadastro_empresa;
 import modelo.Cadastro_mensagem;
@@ -42,14 +44,8 @@ public class TelaCadastroClienteController extends BaseController{
 	    private VBox cadastroMensagens;
 	   @FXML
 	    private VBox cadastroEmpresa;
-	   
-	   //bot�es do menu
-
-	    @FXML
-	    private Button botao1;
-
-	    @FXML
-	    private Button botao2;
+	   @FXML
+            private TableView mensagensCadastradas;
 	    
 	    //bot�es para mudar de ac�o
 	    
@@ -61,6 +57,9 @@ public class TelaCadastroClienteController extends BaseController{
 
 	    @FXML
 	    private Button botaoCE;
+            
+            @FXML
+            private Button botaoMC;
 	    
 	    //bot�es para cadastrar 
 	    @FXML
@@ -116,20 +115,20 @@ public class TelaCadastroClienteController extends BaseController{
 
 	    @FXML
 	    private TextField textProjeto;
-
-	  
-
-	
-	    
+            
        //Botao de mudar telas
+             
 	    @FXML
 	    void acaoCC(ActionEvent event) {
 	    	cadastroCliente.setVisible(true);
 	    	cadastroCliente.managedProperty().bind(cadastroCliente.visibleProperty());
 	      	cadastroMensagens.setVisible(false);
-	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
+                cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
+                mensagensCadastradas.setVisible(false);
+                mensagensCadastradas.managedProperty().bind(mensagensCadastradas.visibleProperty());
 	     	cadastroEmpresa.setVisible(false);
 	    	cadastroEmpresa.managedProperty().bind(cadastroEmpresa.visibleProperty());
+                
 
 	    }
 
@@ -141,8 +140,12 @@ public class TelaCadastroClienteController extends BaseController{
 	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
 	     	cadastroEmpresa.setVisible(true);
 	    	cadastroEmpresa.managedProperty().bind(cadastroEmpresa.visibleProperty());
+                mensagensCadastradas.setVisible(false);
+                mensagensCadastradas.managedProperty().bind(mensagensCadastradas.visibleProperty());
+
 
 	    }
+           
 
 	    @FXML
 	    void acaoCM(ActionEvent event) {
@@ -152,8 +155,24 @@ public class TelaCadastroClienteController extends BaseController{
 	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
 	     	cadastroEmpresa.setVisible(false);
 	    	cadastroEmpresa.managedProperty().bind(cadastroEmpresa.visibleProperty());
+                mensagensCadastradas.setVisible(false);
+                mensagensCadastradas.managedProperty().bind(mensagensCadastradas.visibleProperty());
+                
 
 	    }
+            @FXML
+            public void acaoMC(ActionEvent event) {
+	    	cadastroCliente.setVisible(false);
+	    	cadastroCliente.managedProperty().bind(cadastroCliente.visibleProperty());
+	      	cadastroMensagens.setVisible(false);
+	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
+	     	cadastroEmpresa.setVisible(false);
+	    	cadastroEmpresa.managedProperty().bind(cadastroEmpresa.visibleProperty());
+                mensagensCadastradas.setVisible(true);
+                mensagensCadastradas.managedProperty().bind(mensagensCadastradas.visibleProperty());
+
+            }
+            
 	    //Botoes de cadastrar
 
 	    @FXML

@@ -4,19 +4,37 @@
  */
 package controllers;
 
+import fxml.EmailManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 
-public class TelaMensagensCadastradasController {
+public class TelaMensagensCadastradasController extends BaseController{
+   
+    @FXML
+    private Button botao1;
 
     @FXML
     private Button botao2;
 
     @FXML
-    void cadastrarCliente(ActionEvent event) {
+    void teste(ActionEvent event) {
 
     }
-
+    
+    
+    public TelaMensagensCadastradasController(EmailManager emailManager, javax.swing.text.ViewFactory viewFactory, String fxmlName) {
+		super(emailManager, viewFactory, fxmlName);
+		// TODO Auto-generated constructor stub
+	}
 }
+    
+
+
+
+
+
+
+
 
