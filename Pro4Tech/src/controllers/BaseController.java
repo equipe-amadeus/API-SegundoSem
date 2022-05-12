@@ -1,26 +1,27 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package controllers;
 
-import javax.swing.text.ViewFactory;
+import view.ViewFactory;
 
-import fxml.EmailManager;
-
+/**
+ *
+ * @author lobat
+ */
 public class BaseController {
-	protected EmailManager emailManager;
-    protected ViewFactory viewFactory ;
-	private String fxmlName;
-	
-	public BaseController(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
-		super();
-		this.emailManager = emailManager;
-		this.viewFactory = viewFactory;
-		this.fxmlName = fxmlName;
-		
-	}
+    
+    protected ViewFactory viewFactory;
+    protected String fxmlName;
 
-	public String getFxmlName() {
-		return fxmlName;
-	}
-
-	
-
+    public BaseController(ViewFactory viewFactory, String fxmlName) {
+        this.viewFactory = viewFactory;
+        this.fxmlName = fxmlName;
+    }
+    
+    public String getFxmlName() {
+        return fxmlName;
+    }
+    
 }

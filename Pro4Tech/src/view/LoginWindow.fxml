@@ -13,9 +13,8 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="401.0" prefWidth="711.0" style="-fx-background-color: edf0f5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="401.0" prefWidth="711.0" style="-fx-background-color: edf0f5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="82.0" layoutY="232.0" text="Senha" textFill="WHITE" />
       <VBox layoutX="160.0" layoutY="187.0" prefHeight="200.0" prefWidth="390.0" style="-fx-background-color: e5e5e5;">
          <effect>
             <DropShadow height="8.75" offsetX="1.0" offsetY="1.0" radius="3.9375" width="9.0">
@@ -48,7 +47,7 @@
                   <Insets bottom="10.0" />
                </padding>
             </PasswordField>
-            <Button fx:id="login" mnemonicParsing="false" onAction="#Entrar" onMouseClicked="#Entrar" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: orange;" text="Login" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+            <Button mnemonicParsing="false" onAction="#Entrar" onMouseClicked="#Entrar" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: orange;" text="Login" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                <VBox.margin>
                   <Insets left="100.0" right="100.0" top="20.0" />
                </VBox.margin>

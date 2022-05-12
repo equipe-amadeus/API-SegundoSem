@@ -1,7 +1,7 @@
 package controllers;
 
  
-import Dao.CadastroDAO;
+import Dao.CadastroClienteDAO;
 import Dao.Cadastro_empresaDAO;
 import Dao.Cadastro_mensagemDAO;
 import javafx.event.ActionEvent;
@@ -24,221 +24,145 @@ import java.text.ParseException;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 
-import fxml.EmailManager;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import modelo.Cadastro;
+import javafx.stage.Stage;
+import modelo.CadastroCliente;
 import modelo.Cadastro_empresa;
 import modelo.Cadastro_mensagem;
+import view.ViewFactory;
+
 
 public class TelaCadastroClienteController extends BaseController{
+    
+    public TelaCadastroClienteController(ViewFactory viewFactory, String fxmlName){
+        super(viewFactory, fxmlName);
+    }  
+	   
+    @FXML
+    private TextField Cargo;
 
-	  public TelaCadastroClienteController(EmailManager emailManager, javax.swing.text.ViewFactory viewFactory, String fxmlName) {
-		super(emailManager, viewFactory, fxmlName);
-		// TODO Auto-generated constructor stub
-	}
-	  //telas
-	   @FXML
-	    private VBox cadastroCliente;
-	   @FXML
-	    private VBox cadastroMensagens;
-	   @FXML
-	    private VBox cadastroEmpresa;
-	   @FXML
-            private TableView mensagensCadastradas;
-	    
-	    //bot�es para mudar de ac�o
-	    
-	    @FXML
-	    private Button botaoCM;
+    @FXML
+    private TextField Email;
 
-	    @FXML
-	    private Button botaoCC;
+    @FXML
+    private TextField Empresa;
 
-	    @FXML
-	    private Button botaoCE;
-            
-            @FXML
-            private Button botaoMC;
-	    
-	    //bot�es para cadastrar 
-	    @FXML
-	    private Button btncadastrarMensagens;
+    @FXML
+    private TextField Nome;
 
-	    @FXML
-	    private Button cadastrarButton;
+    @FXML
+    private TextField Projeto;
 
-	    @FXML
-	    private Button cadastrarEmpresa;
-	    
-	    //Areas de texto cliente
-	    @FXML
-	    private TextField cargoTextArea;
+    @FXML
+    private TextField Telefone;
 
-	    @FXML
-	    private TextField emailTextField;
+    @FXML
+    private Label invalidDetailsCliente;
 
-	    @FXML
-	    private TextField empresaTextField;
+    @FXML
+    private VBox cadastroCliente;
 
-	    @FXML
-	    private TextField nomeTextField;
-
-	    @FXML
-	    private TextField numeroTextField;
-
-	    @FXML
-	    private TextField projetoTextField;
-	    
-	    //Area de texto tela mensagens
-	    @FXML
-	    private TextField textCategoria;
-
-	    @FXML
-	    private TextField textTitulo;
-
-	    @FXML
-	    private TextField textNome;
-
-	    @FXML
-	    private TextField textMeioDeComunicacao;
-            
-            @FXML
-            private TextField textMensagem;
-	    
-	    //Area de texto tela cadastroEmpresa
-	    @FXML
-	    private TextField nomeEmpresa;
-
-	    @FXML
-	    private TextField textResponsavel;
-
-	    @FXML
-	    private TextField textProjeto;
-            
-       //Botao de mudar telas
-             
-	    @FXML
-	    void acaoCC(ActionEvent event) {
-	    	cadastroCliente.setVisible(true);
-	    	cadastroCliente.managedProperty().bind(cadastroCliente.visibleProperty());
-	      	cadastroMensagens.setVisible(false);
-                cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
-                mensagensCadastradas.setVisible(false);
-                mensagensCadastradas.managedProperty().bind(mensagensCadastradas.visibleProperty());
-	     	cadastroEmpresa.setVisible(false);
-	    	cadastroEmpresa.managedProperty().bind(cadastroEmpresa.visibleProperty());
-                
-
-	    }
-
-	    @FXML
-	    void acaoCE(ActionEvent event) {
-	    	cadastroCliente.setVisible(false);
-	    	cadastroCliente.managedProperty().bind(cadastroCliente.visibleProperty());
-	      	cadastroMensagens.setVisible(false);
-	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
-	     	cadastroEmpresa.setVisible(true);
-	    	cadastroEmpresa.managedProperty().bind(cadastroEmpresa.visibleProperty());
-                mensagensCadastradas.setVisible(false);
-                mensagensCadastradas.managedProperty().bind(mensagensCadastradas.visibleProperty());
+    @FXML
+    void Voltar(ActionEvent event) {
+        viewFactory.TelaInicialSuporte();
+        Stage stage = (Stage)Telefone.getScene().getWindow();
+        viewFactory.closeStage(stage);
+    }
 
 
-	    }
-           
+    protected
+    String successMessage = String.format("-fx-text-fill: GREEN;");
+    String errorMessage = String.format("-fx-text-fill: RED;");
+    String errorStyle = String.format("-fx-border-color: RED; -fx-border-width: 2; -fx-border-radius: 5;");
+    String successStyle = String.format("-fx-border-color: GREEN; -fx-border-width: 2; -fx-border-radius: 5;");
+    
+    @FXML
+    protected void CC (ActionEvent event) throws InterruptedException {
 
-	    @FXML
-	    void acaoCM(ActionEvent event) {
-	    	cadastroCliente.setVisible(false);
-	    	cadastroCliente.managedProperty().bind(cadastroCliente.visibleProperty());
-	      	cadastroMensagens.setVisible(true);
-	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
-	     	cadastroEmpresa.setVisible(false);
-	    	cadastroEmpresa.managedProperty().bind(cadastroEmpresa.visibleProperty());
-                mensagensCadastradas.setVisible(false);
-                mensagensCadastradas.managedProperty().bind(mensagensCadastradas.visibleProperty());
-                
+        if (Cargo.getText().isEmpty() || Email.getText().isEmpty() || Empresa.getText().isEmpty() || Nome.getText().isEmpty() || Projeto.getText().isEmpty() || Telefone.getText().isEmpty()) {
+            invalidDetailsCliente.setStyle(errorMessage);
+            invalidDetailsCliente.setText("Todos os campos são obrigatórios");
+  
 
-	    }
-            @FXML
-            public void acaoMC(ActionEvent event) {
-	    	cadastroCliente.setVisible(false);
-	    	cadastroCliente.managedProperty().bind(cadastroCliente.visibleProperty());
-	      	cadastroMensagens.setVisible(false);
-	    	cadastroMensagens.managedProperty().bind(cadastroMensagens.visibleProperty());
-	     	cadastroEmpresa.setVisible(false);
-	    	cadastroEmpresa.managedProperty().bind(cadastroEmpresa.visibleProperty());
-                mensagensCadastradas.setVisible(true);
-                mensagensCadastradas.managedProperty().bind(mensagensCadastradas.visibleProperty());
+            if (Cargo.getText().isEmpty()) {
+                Cargo.setStyle(errorStyle);
+
+            } 
+            else Cargo.setStyle(successStyle);
+
+            if (Email.getText().isEmpty()) {
+                Email.setStyle(errorStyle);
+
+            } 
+            else Email.setStyle(successStyle);
+
+            if (Empresa.getText().isEmpty()) {
+                Empresa.setStyle(errorStyle);
+
+            } 
+            else Empresa.setStyle(successStyle);
+
+            if (Nome.getText().isEmpty()) {
+            Nome.setStyle(errorStyle);
 
             }
+            else Nome.setStyle(successStyle);
             
-	    //Botoes de cadastrar
+            if (Projeto.getText().isEmpty()) {
+            Projeto.setStyle(errorStyle);
 
-	    @FXML
-	    void cadastrarCliente(ActionEvent event) {
-                
-                    String cargo, nome, email, nome_empresa, projetos, whatsapp;
+            } 
+            else Projeto.setStyle(successStyle);
+
+            if (Telefone.getText().isEmpty()) {
+            Telefone.setStyle(errorStyle);
+
+            } 
+            else Telefone.setStyle(successStyle);
+            
+        }
+
+        else {
+          invalidDetailsCliente.setText("Tudo certo!");
+          invalidDetailsCliente.setStyle(successMessage);
+          Cargo.setStyle(successStyle);
+          Email.setStyle(successStyle);
+          Empresa.setStyle(successStyle);
+          Nome.setStyle(successStyle);
+          Projeto.setStyle(successStyle);
+          Telefone.setStyle(successStyle);
+          String cargo, nome, email, nome_empresa, projetos, telefone;
+                  
+                  cargo = Cargo.getText();
+                  nome = Nome.getText();
+                  email = Email.getText();
+                  nome_empresa = Empresa.getText();
+                  projetos = Projeto.getText();
+                  telefone = Telefone.getText();
+
+                  CadastroCliente objcadastro = new CadastroCliente();
+                  objcadastro.setCargo(cargo);
+                  objcadastro.setNome(nome);
+                  objcadastro.setEmail(email);
+                  objcadastro.setNome_empresa(nome_empresa);
+                  objcadastro.setProjetos(projetos);
+                  objcadastro.setTelefone(telefone);
+
+                  CadastroClienteDAO objcadastrodao = new CadastroClienteDAO();
+                  objcadastrodao.cadastrar(objcadastro);
+
+            }
+
+        }
                     
-                    cargo = cargoTextArea.getText();
-                    nome = nomeTextField.getText();
-                    email = emailTextField.getText();
-                    nome_empresa = empresaTextField.getText();
-                    projetos = projetoTextField.getText();
-                    whatsapp = numeroTextField.getText();
-
-                    Cadastro objcadastro = new Cadastro();
-                    objcadastro.setCargo(cargo);
-                    objcadastro.setNome(nome);
-                    objcadastro.setEmail(email);
-                    objcadastro.setNome_empresa(nome_empresa);
-                    objcadastro.setProjetos(projetos);
-                    objcadastro.setWhatsapp(whatsapp);
-
-                    CadastroDAO objcadastrodao = new CadastroDAO();
-                    objcadastrodao.cadastrar(objcadastro);
-
-	    }
-	    @FXML
-	    void cadastrarMensagens(ActionEvent event) {
-                String titulo, categoria, nome, meio_comunicacao, conteudo;
-                    titulo = textTitulo.getText();
-                    categoria = textCategoria.getText();
-                    nome = textNome.getText();
-                    meio_comunicacao = textMeioDeComunicacao.getText();
-                    conteudo = textMensagem.getText();
-
-                    Cadastro_mensagem objcadastro_mensagem = new Cadastro_mensagem ();
-                    objcadastro_mensagem.setTitulo(titulo);
-                    objcadastro_mensagem.setCategoria(categoria);
-                    objcadastro_mensagem.setNome(nome);
-                    objcadastro_mensagem.setMeio_comunicacao(meio_comunicacao);
-                    objcadastro_mensagem.setConteudo(conteudo);
-
-                    Cadastro_mensagemDAO objcadastro_mensagemdao = new Cadastro_mensagemDAO();
-                    objcadastro_mensagemdao.cadastrar_mensagem(objcadastro_mensagem);
-
-	    }
-
-            @FXML
-            void cadastrarEmpresa(ActionEvent event) {
-                        String nome_empresa, responsavel, nome_projeto;
-
-                        nome_empresa = nomeEmpresa.getText();
-                        responsavel = textResponsavel.getText();
-                        nome_projeto = textProjeto.getText();
-
-                        Cadastro_empresa objcadastro_empresa = new Cadastro_empresa();
-                        objcadastro_empresa.setNome_empresa(nome_empresa);
-                        objcadastro_empresa.setResponsavel(responsavel);
-                        objcadastro_empresa.setNome_projeto(nome_projeto);
-
-
-                        Cadastro_empresaDAO objcadastro_empresadao = new Cadastro_empresaDAO();
-                        objcadastro_empresadao.cadastrar_empresa(objcadastro_empresa);
-
-                }
-} 
+    }
+	   
 	    
 	    	
 	    

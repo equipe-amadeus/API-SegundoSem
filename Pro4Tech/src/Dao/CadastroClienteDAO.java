@@ -7,15 +7,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import modelo.Cadastro;
+import modelo.CadastroCliente;
 
 
-public class CadastroDAO {
+public class CadastroClienteDAO {
     Connection conn;
     PreparedStatement pstm;
     
-    public void cadastrar(Cadastro objcadastro){
-        String sql = "INSERT INTO cadastro(cargo, nome, email, nome_empresa, projetos, whatsapp) VALUES(?,?,?,?,?,?)";
+    public void cadastrar(CadastroCliente objcadastro){
+        String sql = "INSERT INTO cadastro(cargo, nome, email, nome_empresa, projetos, telefone) VALUES(?,?,?,?,?,?)";
         
         conn = new ConnectionFactory().conectaBD();
         
@@ -26,7 +26,7 @@ public class CadastroDAO {
             pstm.setString(3, objcadastro.getEmail());
             pstm.setString(4, objcadastro.getNome_empresa());
             pstm.setString(5, objcadastro.getProjetos());
-            pstm.setString(6, objcadastro.getWhatsapp());
+            pstm.setString(6, objcadastro.getTelefone());
             pstm.execute();
             pstm.close();
             

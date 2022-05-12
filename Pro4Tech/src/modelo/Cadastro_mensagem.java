@@ -12,7 +12,6 @@ public class Cadastro_mensagem {
    private int id_mensagem;
     private String titulo;
     private String categoria;
-    private String nome;
     private String conteudo;
     private String meio_comunicacao;
 
@@ -38,14 +37,6 @@ public class Cadastro_mensagem {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getConteudo() {

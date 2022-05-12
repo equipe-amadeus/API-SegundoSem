@@ -8,13 +8,13 @@ package modelo;
  *
  * @author diego
  */
-public class Cadastro {
+public class CadastroCliente {
     private String cargo;
     private String nome;
     private String email;
     private String nome_empresa;
     private String projetos;
-    private String whatsapp;
+    private String telefone;
 
     public String getCargo() {
         return cargo;
@@ -56,12 +56,12 @@ public class Cadastro {
         this.projetos = projetos;
     }
 
-    public String getWhatsapp() {
-        return whatsapp;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setWhatsapp(String whatsapp) {
-        this.whatsapp = whatsapp;
+    public void setTelefone(String whatsapp) {
+        this.telefone = whatsapp;
     }
     
     
