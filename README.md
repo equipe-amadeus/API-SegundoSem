@@ -4,15 +4,13 @@
 
 ## Participantes
 
-|Nome|Função|GitHub
-| -------- |-------- |--------
-|**Gustavo Konflanz Mezzomo**| Product Owner|[<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465" />](https://github.com/gustavomezzomo)|<img src = "https://media-exp1.licdn.com/dms/image/C4E03AQEqjHK3s2KQ9g/profile-displayphoto-shrink_800_800/0/1614391630089?e=1626912000&v=beta&t=7Wk-nGEpy8Ug3IaCBaw4LwKh4nCq6Z3LD7BtgxuiOcM" height="50"/>|
-|**Gustavo Lobato de Paulo**| Scrum Master |[<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465"/>](https://github.com/Gustavoldp)|<img src = "https://media-exp1.licdn.com/dms/image/C4E03AQEqjHK3s2KQ9g/profile-displayphoto-shrink_800_800/0/1614391630089?e=1626912000&v=beta&t=7Wk-nGEpy8Ug3IaCBaw4LwKh4nCq6Z3LD7BtgxuiOcM" height="50"/>|
-|**Diego Batista da Silva**| Desenvolvedor |[<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465" />](https://github.com/diiegobsilva)|<img src = "https://media-exp1.licdn.com/dms/image/C4E03AQEqjHK3s2KQ9g/profile-displayphoto-shrink_800_800/0/1614391630089?e=1626912000&v=beta&t=7Wk-nGEpy8Ug3IaCBaw4LwKh4nCq6Z3LD7BtgxuiOcM" height="50"/>|
-|**Gabriele Stephanie Silva de Oliveira**| Desenvolvedor |[<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465" />](https://github.com/oliveira-gabriele)|<img src = "https://media-exp1.licdn.com/dms/image/C4E03AQEqjHK3s2KQ9g/profile-displayphoto-shrink_800_800/0/1614391630089?e=1626912000&v=beta&t=7Wk-nGEpy8Ug3IaCBaw4LwKh4nCq6Z3LD7BtgxuiOcM" height="50"/>|
-|**Guilherme Konflanz Mezzomo**| Desenvolvedor |[<img src="https://camo.githubusercontent.com/fbc3df79ffe1a99e482b154b29262ecbb10d6ee4ed22faa82683aa653d72c4e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d3130303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465" />](https://github.com/GuilhermeKMezzomo)|<img src = "https://media-exp1.licdn.com/dms/image/C4E03AQEqjHK3s2KQ9g/profile-displayphoto-shrink_800_800/0/1614391630089?e=1626912000&v=beta&t=7Wk-nGEpy8Ug3IaCBaw4LwKh4nCq6Z3LD7BtgxuiOcM" height="50"/>|
-
-
+|Nome|Função|GitHub|LinkedIn|
+| -------- |-------- |-------- | --------|
+|**Gustavo Konflanz Mezzomo**| Product Owner|<a href="https://github.com/gustavomezzomo" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+|**Gustavo Lobato de Paulo**| Scrum Master |<a href="https://github.com/Gustavoldp" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+|**Diego Batista da Silva**| Desenvolvedor | <a href="https://github.com/diiegobsilva" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+|**Gabriele Stephanie Silva de Oliveira**| Desenvolvedor |<a href="https://github.com/oliveira-gabriele" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="https://www.linkedin.com/in/gabriele-oliveira-929317221" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>|
+|**Guilherme Konflanz Mezzomo**| Desenvolvedor | <a href="https://github.com/GuilhermeKMezzomo" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 
 ## Índice
 
@@ -49,6 +47,14 @@ Criar um sistema para centralizar a comunicação entre clientes e empresa.
   ---
   - [ ] MySQL Workbench.
 
+## User Story
+| Quem | O que? | Para |
+|:--------------:  | :----------:|:---------------------------------------------------------:|
+| Desenvolvedor | Hospedar o banco de dados na nuvem. | Para uma comunicação padrão para todas as máquinas. |
+| Desenvolvedor | Desenvolver um sistema em JavaFx | Variedade de recursos e qualidade visual. |
+| Desenvolvedor | Validator | Identificar visualmente se existem campos inválidos. |
+| Desenvolvedor | CRUD | Para a manipulação dos itens no banco de dados. |
+
 ## Backlog do produto
 
 Tarefa | Prioridade
@@ -60,9 +66,9 @@ Conexão do banco de dados com a interface | Alta prioridade
 Criação de interface de cadastro de usuários | Média prioridade
 Criação da interface usuário adm | Média prioridade
 Criação da interface inicial | Média prioridade
-Chat  | Alta prioridade 
-Validators | Alta prioridade 
-Finalização do CRUD | Média prioridade 
+Criação de sistema de Chat  | Alta prioridade 
+Validação para os campos | Alta prioridade 
+CRUD | Alta prioridade 
 Banco de dados Azure | Média prioridade 
 
 
@@ -82,7 +88,6 @@ Banco de dados Azure | Média prioridade
 ## Entregas
 
 * Sprint 1 (25/03/2022 - 14/04/2022)
-
   - Criação do banco de dados;
   - Conexão do banco de dados com a interface;
   - Criação das interfaces.
@@ -90,18 +95,19 @@ Banco de dados Azure | Média prioridade
 * Sprint 2 (25/04/2022 - 15/05/2022)
   - Validators;
   - Banco de dados Azure;
-  - Finalização do CRUD;
+  - CRUD;
   - Chat.
 
 * Sprint 3 (16/05/2022 - 05/06/2022) 
 
-## 🛠️ Tecnologias Utilizadas  
+## 🛠️ Tecnologias Utilizadas 
 
 - CSS3 : Estilização
 - Figma : Prototipagem
 - Java : Linguagem de programação
 - JavaFx : Framework
 - JavaSwing : Framework
+- Microsoft Azure : Hospedagem na nuvem
 - MySQL : Banco de Dados
 - Scene Builder : Ferramenta para edição do layout
  
