@@ -47,7 +47,7 @@
                   <Insets bottom="10.0" />
                </padding>
             </PasswordField>
-            <Button mnemonicParsing="false" onAction="#Entrar" onMouseClicked="#Entrar" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: orange;" text="Login" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#Entrar" onMouseClicked="#Entrar" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: orange;" text="Login" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                <VBox.margin>
                   <Insets left="100.0" right="100.0" top="20.0" />
                </VBox.margin>
