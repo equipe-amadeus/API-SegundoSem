@@ -2,39 +2,13 @@ package controllers;
 
  
 import Dao.CadastroClienteDAO;
-import Dao.Cadastro_empresaDAO;
-import Dao.Cadastro_mensagemDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.text.ParseException;
-
-import javax.swing.JComponent;
-import javax.swing.JOptionPane;
-
-import java.io.IOException;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import modelo.CadastroCliente;
-import modelo.Cadastro_empresa;
-import modelo.Cadastro_mensagem;
 import view.ViewFactory;
 
 

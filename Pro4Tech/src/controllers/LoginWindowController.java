@@ -1,7 +1,6 @@
 package controllers;
 
 import Dao.CadastroClienteDAO;
-import com.mysql.cj.protocol.Resultset;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,21 +10,30 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
+import modelo.CadastroChat;
 import modelo.CadastroCliente;
 import view.ViewFactory;
 
-public class LoginWindowController extends BaseController {
+
+public class LoginWindowController extends BaseController {    
 
     public LoginWindowController(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
     }
+    
+    
+    
+    
 
     @FXML
-    private TextField areaEmail;
+    public TextField areaEmail;
+    
 
     @FXML
     private PasswordField areaSenha;
-
+    
+    
+    
     @FXML
     void Entrar(ActionEvent event) throws IOException {
         try {
