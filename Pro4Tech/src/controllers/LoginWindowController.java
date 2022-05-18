@@ -27,8 +27,6 @@ public class LoginWindowController extends BaseController {
 
     @FXML
     public TextField areaEmail;
-    
-
     @FXML
     private PasswordField areaSenha;
     
@@ -38,11 +36,13 @@ public class LoginWindowController extends BaseController {
     void Entrar(ActionEvent event) throws IOException {
         try {
 
-            String Email;
+            String Email, Senha;
             Email = areaEmail.getText();
+            Senha = areaSenha.getText();
 
             CadastroCliente objCadastroCliente = new CadastroCliente();
             objCadastroCliente.setEmail(Email);
+            objCadastroCliente.setSenha(Senha);
 
             CadastroClienteDAO objCadastroClienteDAO = new CadastroClienteDAO();
             ResultSet rsCadastroClienteDAO = objCadastroClienteDAO.autenticacaoUsuario(objCadastroCliente);
@@ -52,11 +52,13 @@ public class LoginWindowController extends BaseController {
 
                 viewFactory.TelaInicialSuporte();
                 Stage stage = (Stage) areaEmail.getScene().getWindow();
+                areaSenha.getScene().getWindow();
+                
                 viewFactory.closeStage(stage);
 
             } else {
                 //ENVIAR MENSAGEM DIZENDO INCORRETO.
-                JOptionPane.showMessageDialog(null, "usuario Inválido");
+                JOptionPane.showMessageDialog(null, "Usuario ou Senha Inválida");
 
             }
 
