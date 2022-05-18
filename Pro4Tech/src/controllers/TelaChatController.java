@@ -93,6 +93,10 @@ public class TelaChatController extends BaseController{
         }    
     }
     
+    void ReceiveMessage(){
+        
+    }
+    
     @FXML
     void Voltar(ActionEvent event) {
         viewFactory.TelaInicialSuporte();
