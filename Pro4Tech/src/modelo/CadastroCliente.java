@@ -15,6 +15,15 @@ public class CadastroCliente {
     private String nome_empresa;
     private String projetos;
     private String telefone;
+    private String senha;
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
     public String getCargo() {
         return cargo;

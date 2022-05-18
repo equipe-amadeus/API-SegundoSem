@@ -16,7 +16,7 @@ public class CadastroClienteDAO {
     PreparedStatement pstm;
 
     public void cadastrar(CadastroCliente objcadastro) {
-        String sql = "INSERT INTO cadastro(cargo, nome, email, nome_empresa, projetos, telefone) VALUES(?,?,?,?,?,?)";
+        String sql = "INSERT INTO cadastro(cargo, nome, email, nome_empresa, projetos, telefone, senha) VALUES(?,?,?,?,?,?,?)";
 
         conn = new ConnectionFactory().conectaBD();
 
@@ -28,6 +28,7 @@ public class CadastroClienteDAO {
             pstm.setString(4, objcadastro.getNome_empresa());
             pstm.setString(5, objcadastro.getProjetos());
             pstm.setString(6, objcadastro.getTelefone());
+            pstm.setString(7, objcadastro.getSenha());
             pstm.execute();
             pstm.close();
 
@@ -42,10 +43,11 @@ public class CadastroClienteDAO {
 
         try {
 
-            String sql = "SELECT * FROM cadastro WHERE email = ?";
+            String sql = "SELECT * FROM cadastro WHERE email = ? and senha = ?";
 
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, objCadastroCliente.getEmail());
+            pstm.setString(2, objCadastroCliente.getSenha());
 
             ResultSet rs = pstm.executeQuery();
             return rs;

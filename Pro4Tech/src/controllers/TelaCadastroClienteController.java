@@ -5,6 +5,7 @@ import Dao.CadastroClienteDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -23,6 +24,9 @@ public class TelaCadastroClienteController extends BaseController{
 
     @FXML
     private TextField Email;
+    
+    @FXML
+    private PasswordField Senha;
 
     @FXML
     private TextField Empresa;
@@ -41,6 +45,8 @@ public class TelaCadastroClienteController extends BaseController{
 
     @FXML
     private VBox cadastroCliente;
+    
+    
 
     @FXML
     void Voltar(ActionEvent event) {
