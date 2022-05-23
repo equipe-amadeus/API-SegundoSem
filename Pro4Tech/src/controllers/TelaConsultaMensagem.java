@@ -246,6 +246,7 @@ public class TelaConsultaMensagem extends javax.swing.JFrame {
         txtConteudo.setText(TabelaMensagem.getModel().getValueAt(setar, 4).toString());
 
     }
+
     
     private void AlterarMensagem(){
         int id_mensagem;

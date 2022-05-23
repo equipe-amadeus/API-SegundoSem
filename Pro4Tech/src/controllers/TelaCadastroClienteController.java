@@ -2,8 +2,14 @@ package controllers;
 
  
 import Dao.CadastroClienteDAO;
+import java.awt.event.MouseEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -17,10 +23,13 @@ public class TelaCadastroClienteController extends BaseController{
     
     public TelaCadastroClienteController(ViewFactory viewFactory, String fxmlName){
         super(viewFactory, fxmlName);
-    }  
-	   
+    }
+    
+    
+    
     @FXML
-    private TextField Cargo;
+    public ComboBox<String> Cargo;
+    
 
     @FXML
     private TextField Email;
@@ -46,7 +55,11 @@ public class TelaCadastroClienteController extends BaseController{
     @FXML
     private VBox cadastroCliente;
     
-    
+    ObservableList<String> lista = FXCollections.observableArrayList("Cliente", "Suporte", "Administrador");
+    @FXML
+    public void initialize(){
+        Cargo.getItems().addAll(lista);
+    }
 
     @FXML
     void Voltar(ActionEvent event) {
@@ -65,17 +78,15 @@ public class TelaCadastroClienteController extends BaseController{
     @FXML
     protected void CC (ActionEvent event) throws InterruptedException {
 
-        if (Cargo.getText().isEmpty() || Email.getText().isEmpty() || Empresa.getText().isEmpty() || Nome.getText().isEmpty() || Projeto.getText().isEmpty() || Telefone.getText().isEmpty()) {
+        if (Cargo.getValue().trim().isEmpty() || Email.getText().isEmpty() || Empresa.getText().isEmpty() || Nome.getText().isEmpty() || Projeto.getText().isEmpty() || Telefone.getText().isEmpty() || Senha.getText().isEmpty()) {
             invalidDetailsCliente.setStyle(errorMessage);
             invalidDetailsCliente.setText("Todos os campos são obrigatórios");
-  
-
-            if (Cargo.getText().isEmpty()) {
+            
+            if (Cargo.getValue().trim().isEmpty()){
                 Cargo.setStyle(errorStyle);
-
-            } 
+            }
             else Cargo.setStyle(successStyle);
-
+            
             if (Email.getText().isEmpty()) {
                 Email.setStyle(errorStyle);
 
@@ -106,6 +117,11 @@ public class TelaCadastroClienteController extends BaseController{
             } 
             else Telefone.setStyle(successStyle);
             
+            if (Senha.getText().isEmpty()){
+                Senha.setStyle(errorStyle);
+            }
+            else Senha.setStyle(successStyle);
+            
         }
 
         else {
@@ -117,14 +133,16 @@ public class TelaCadastroClienteController extends BaseController{
           Nome.setStyle(successStyle);
           Projeto.setStyle(successStyle);
           Telefone.setStyle(successStyle);
-          String cargo, nome, email, nome_empresa, projetos, telefone;
+          Senha.setStyle(successStyle);
+          String cargo, nome, email, nome_empresa, projetos, telefone, senha;
                   
-                  cargo = Cargo.getText();
+                  cargo = (String) Cargo.getValue();
                   nome = Nome.getText();
                   email = Email.getText();
                   nome_empresa = Empresa.getText();
                   projetos = Projeto.getText();
                   telefone = Telefone.getText();
+                  senha = Senha.getText();
 
                   CadastroCliente objcadastro = new CadastroCliente();
                   objcadastro.setCargo(cargo);
@@ -133,11 +151,12 @@ public class TelaCadastroClienteController extends BaseController{
                   objcadastro.setNome_empresa(nome_empresa);
                   objcadastro.setProjetos(projetos);
                   objcadastro.setTelefone(telefone);
+                  objcadastro.setSenha(senha);
 
                   CadastroClienteDAO objcadastrodao = new CadastroClienteDAO();
                   objcadastrodao.cadastrar(objcadastro);
 
-            }
+            } 
 
         }
                     

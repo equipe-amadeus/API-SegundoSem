@@ -6,14 +6,8 @@
             <file>file:/C:/Users/bruno/OneDrive/Documentos/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaConsultaMensagem.java</file>
         </group>
         <group name="API2022-1">
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaCadastroEmpresaController.java</file>
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/modelo/CadastroCliente.java</file>
             <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaConsultaMensagem.java</file>
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/modelo/CadastroChat.java</file>
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaChatController.java</file>
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/Factory/ConnectionFactory.java</file>
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/Dao/CadastroChatDAO.java</file>
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/modelo/Usuario.java</file>
+            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaCadastroClienteController.java</file>
         </group>
     </open-files>
 </project-private>
