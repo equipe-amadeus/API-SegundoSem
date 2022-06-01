@@ -41,7 +41,7 @@ public class CadastroChatDAO {
         }
 }
     
-    public List<Usuario> ListarUsers(Usuario objUsuario) {
+   /* public List<Usuario> ListarUsers(Usuario objUsuario) {
         
         String sql = "SELECT nome FROM cadastro";
         
@@ -49,6 +49,8 @@ public class CadastroChatDAO {
         
         try{
             pstm = conn.prepareStatement(sql);
+            
+            
             
             
         }catch(SQLException erro){
@@ -60,7 +62,7 @@ public class CadastroChatDAO {
         
         
         
-    }
+    } */
     
 
 }

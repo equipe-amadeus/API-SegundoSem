@@ -22,15 +22,12 @@ public class LoginWindowController extends BaseController {
         super(viewFactory, fxmlName);
     }
     
-    
-    
-    
-
+    public static String nome;
+        
     @FXML
     public TextField areaEmail;
     @FXML
     private PasswordField areaSenha;
-
     @FXML
     private Label invalidDetailsLogin;
 
@@ -39,7 +36,6 @@ public class LoginWindowController extends BaseController {
     String errorMessage = String.format("-fx-text-fill: RED;");
     String errorStyle = String.format("-fx-border-color: RED; -fx-border-width: 2; -fx-border-radius: 5;");
     String successStyle = String.format("-fx-border-color: GREEN; -fx-border-width: 2; -fx-border-radius: 5;");
-    
     
     
     @FXML
@@ -92,6 +88,8 @@ public class LoginWindowController extends BaseController {
                 areaSenha.getScene().getWindow();
                 
                 viewFactory.closeStage(stage);
+                
+                nome = CadastroClienteDAO.buscaToken(objCadastroCliente);
 
             } else {
                 //ENVIAR MENSAGEM DIZENDO INCORRETO.

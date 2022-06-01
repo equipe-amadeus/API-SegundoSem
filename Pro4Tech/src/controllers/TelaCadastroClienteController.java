@@ -2,6 +2,7 @@ package controllers;
 
  
 import Dao.CadastroClienteDAO;
+import static Dao.CadastroClienteDAO.criaToken;
 import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,8 +25,6 @@ public class TelaCadastroClienteController extends BaseController{
     public TelaCadastroClienteController(ViewFactory viewFactory, String fxmlName){
         super(viewFactory, fxmlName);
     }
-    
-    
     
     @FXML
     public ComboBox<String> Cargo;
@@ -54,6 +53,8 @@ public class TelaCadastroClienteController extends BaseController{
 
     @FXML
     private VBox cadastroCliente;
+    
+    
     
     ObservableList<String> lista = FXCollections.observableArrayList("Cliente", "Suporte", "Administrador");
     @FXML
@@ -134,7 +135,7 @@ public class TelaCadastroClienteController extends BaseController{
           Projeto.setStyle(successStyle);
           Telefone.setStyle(successStyle);
           Senha.setStyle(successStyle);
-          String cargo, nome, email, nome_empresa, projetos, telefone, senha;
+          String cargo, nome, email, nome_empresa, projetos, telefone, senha, token;
                   
                   cargo = (String) Cargo.getValue();
                   nome = Nome.getText();
@@ -143,6 +144,7 @@ public class TelaCadastroClienteController extends BaseController{
                   projetos = Projeto.getText();
                   telefone = Telefone.getText();
                   senha = Senha.getText();
+                  token = criaToken();
 
                   CadastroCliente objcadastro = new CadastroCliente();
                   objcadastro.setCargo(cargo);
@@ -152,6 +154,7 @@ public class TelaCadastroClienteController extends BaseController{
                   objcadastro.setProjetos(projetos);
                   objcadastro.setTelefone(telefone);
                   objcadastro.setSenha(senha);
+                  objcadastro.setToken(token);
 
                   CadastroClienteDAO objcadastrodao = new CadastroClienteDAO();
                   objcadastrodao.cadastrar(objcadastro);
