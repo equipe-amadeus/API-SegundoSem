@@ -30,8 +30,4 @@ public class MensagemCadastrada {
     public String getMeio() {
         return meio;
     }
-
-    public String getData() {
-        return data;
-    }
 }
