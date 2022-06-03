@@ -1,7 +1,10 @@
 package controllers;
 
 import Dao.CadastroClienteDAO;
+import Factory.ConnectionFactory;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
@@ -11,7 +14,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
-import modelo.CadastroChat;
 import modelo.CadastroCliente;
 import view.ViewFactory;
 
@@ -37,6 +39,7 @@ public class LoginWindowController extends BaseController {
     String errorStyle = String.format("-fx-border-color: RED; -fx-border-width: 2; -fx-border-radius: 5;");
     String successStyle = String.format("-fx-border-color: GREEN; -fx-border-width: 2; -fx-border-radius: 5;");
     
+        
     
     @FXML
     void Entrar(ActionEvent event) throws IOException {
@@ -76,9 +79,10 @@ public class LoginWindowController extends BaseController {
             CadastroCliente objCadastroCliente = new CadastroCliente();
             objCadastroCliente.setEmail(Email);
             objCadastroCliente.setSenha(Senha);
+            nome = CadastroClienteDAO.buscaNome(Email);
 
             CadastroClienteDAO objCadastroClienteDAO = new CadastroClienteDAO();
-            ResultSet rsCadastroClienteDAO = objCadastroClienteDAO.autenticacaoUsuario(objCadastroCliente);
+            ResultSet rsCadastroClienteDAO = objCadastroClienteDAO.autenticacaoUsuario(objCadastroCliente);            
 
             if (rsCadastroClienteDAO.next()) {
                 //CHAMAR TELA QUE EU QUERO ABRIR.
@@ -88,8 +92,6 @@ public class LoginWindowController extends BaseController {
                 areaSenha.getScene().getWindow();
                 
                 viewFactory.closeStage(stage);
-                
-                nome = CadastroClienteDAO.buscaToken(objCadastroCliente);
 
             } else {
                 //ENVIAR MENSAGEM DIZENDO INCORRETO.

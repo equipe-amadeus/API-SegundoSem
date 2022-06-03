@@ -2,6 +2,7 @@ package Dao;
 
 import Factory.ConnectionFactory;
 import com.mysql.cj.protocol.Resultset;
+import static controllers.LoginWindowController.nome;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -32,7 +33,7 @@ public class CadastroClienteDAO {
             pstm.setString(5, objcadastro.getProjetos());
             pstm.setString(6, objcadastro.getTelefone());
             pstm.setString(7, objcadastro.getSenha());
-            pstm.setString(8, objcadastro.getToken());
+            pstm.setString(8, criaToken());
             pstm.execute();
             pstm.close();
 
@@ -78,29 +79,32 @@ public class CadastroClienteDAO {
         return CadastroClienteDAO.token;
         
     }
-    
-    public static String buscaToken(CadastroCliente objcadastro) throws SQLException{
+    public static String buscaNome(String email){
         
-        conn = new ConnectionFactory().conectaBD();
+        Connection conn = new ConnectionFactory().conectaBD();
         ResultSet rs;
-        Statement stmt = conn.createStatement();
-        
+        PreparedStatement stmt;
+        String sql = "SELECT nome FROM cadastro WHERE email = ?";
         
         try {
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1, email);
+
+            rs = stmt.executeQuery();
+            rs.next();
             
-            rs = stmt.executeQuery("SELECT token FROM cadastro WHERE nome LIKE" + objcadastro.getEmail() + '"');
-            pstm.close();
-            token = rs.getString(token);
+            String retorno = rs.getString("nome");
+            
+
+            return retorno;
+            
         }catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "Erro na busca" + erro);
+            return null;
         }
-        
-        
-        return token;
-        
-
-        
+    
     }
+    
 }
         
 

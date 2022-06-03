@@ -13,24 +13,26 @@
 <AnchorPane fx:id="TelaInicialSuporte" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: edf0f5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="54.0" prefWidth="750.0" style="-fx-background-color: FFB74A;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Downloads/Design%20sem%20nome%20(1).png" />
-         </image>
-      </ImageView>
       <HBox layoutX="28.0" layoutY="144.0" prefHeight="138.0" prefWidth="866.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#CT" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFC107; -fx-background-radius: 20px; -fx-border-radius: 20;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#CT" prefHeight="48.0" prefWidth="150.0" style="-fx-background-radius: 20px; -fx-border-radius: 20; -fx-background-color: fffff;" textFill="WHITE">
                <HBox.margin>
                   <Insets left="100.0" />
                </HBox.margin>
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/chat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button mnemonicParsing="false" onAction="#TelaCM" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFB74A; -fx-background-radius: 20px; -fx-border-radius: 20;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#TelaCM" prefHeight="98.0" prefWidth="142.0" style="-fx-background-radius: 20px; -fx-border-radius: 20; -fx-background-color: fffff;" textFill="WHITE">
                <HBox.margin>
-                  <Insets left="100.0" />
+                  <Insets left="100.0" top="16.0" />
                </HBox.margin>
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
@@ -38,8 +40,15 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="80.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/email.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button mnemonicParsing="false" onAction="#TelaCC" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFB74A; -fx-background-radius: 20px; -fx-border-radius: 20;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#TelaCC" prefHeight="100.0" prefWidth="160.0" style="-fx-background-radius: 20px; -fx-background-color: fffff; -fx-border-radius: 20;" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
@@ -47,29 +56,50 @@
                   <Font name="System Bold" size="12.0" />
                </font>
                <HBox.margin>
-                  <Insets left="100.0" />
+                  <Insets left="100.0" top="16.0" />
                </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/resume.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </HBox>
-      <Label layoutX="398.0" layoutY="258.0" text="Cadastrar Mensagem" textAlignment="CENTER" />
-      <Label layoutX="189.0" layoutY="258.0" text="Chat" textAlignment="CENTER" />
-      <Label layoutX="389.0" layoutY="76.0" prefHeight="18.0" prefWidth="103.0" text="TESTE TESTE TESTE" />
+      <Label layoutX="379.0" layoutY="258.0" text="Cadastrar Mensagem" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="189.0" layoutY="258.0" text="Chat" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
       <ImageView fitHeight="72.0" fitWidth="139.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagens/girafabranca.png" />
          </image>
       </ImageView>
       <Label fx:id="Ajuda" layoutX="24.0" layoutY="504.0" text="Ajuda" textAlignment="CENTER" />
-      <Label layoutX="667.0" layoutY="259.0" text="Cadastrar Cliente" textAlignment="CENTER" />
-      <Label layoutX="277.0" layoutY="425.0" text="Cadastrar Empresa" textAlignment="CENTER" />
-      <Label layoutX="510.0" layoutY="428.0" text="Mensagens Arquivadas" textAlignment="CENTER" />
+      <Label layoutX="642.0" layoutY="259.0" text="Cadastrar Cliente" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="262.0" layoutY="425.0" text="Cadastrar Empresa" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="499.0" layoutY="428.0" text="Mensagens Arquivadas" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
       <HBox layoutX="28.0" layoutY="304.0" prefHeight="137.0" prefWidth="830.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#TelaCE" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFB74A; -fx-background-radius: 20px; -fx-border-radius: 20;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#TelaCE" prefHeight="110.0" prefWidth="142.0" style="-fx-background-color: fffff; -fx-background-radius: 20px; -fx-border-radius: 20;" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
@@ -79,8 +109,15 @@
                <HBox.margin>
                   <Insets left="220.0" />
                </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="102.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/company.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button mnemonicParsing="false" onAction="#TelaMC" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFB74A; -fx-background-radius: 20px; -fx-border-radius: 20;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#TelaMC" prefHeight="107.0" prefWidth="155.0" style="-fx-background-radius: 20px; -fx-border-radius: 20; -fx-background-color: fffff;" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
@@ -88,8 +125,15 @@
                   <Font name="System Bold" size="12.0" />
                </font>
                <HBox.margin>
-                  <Insets left="100.0" />
+                  <Insets left="100.0" top="11.0" />
                </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/archive.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
       </HBox>

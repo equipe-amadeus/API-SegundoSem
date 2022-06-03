@@ -2,10 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="API2022-1">
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaConsultaMensagem.java</file>
-            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaCadastroClienteController.java</file>
-        </group>
         <group/>
+        <group name="API2022-1">
+            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/modelo/CadastroCliente.java</file>
+            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaCadastroClienteController.java</file>
+            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/controllers/TelaChatController.java</file>
+            <file>file:/C:/Users/lobat/Documents/GitHub/API-SegundoSem/Pro4Tech/src/Dao/CadastroClienteDAO.java</file>
+        </group>
     </open-files>
 </project-private>

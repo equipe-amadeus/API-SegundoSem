@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controllers;
 
 import Dao.CadastroChatDAO;
 import java.io.IOException;
+import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -20,6 +17,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import modelo.CadastroChat;
+import modelo.CadastroCliente;
 import view.ViewFactory;
 
 /**
@@ -47,16 +45,16 @@ public class TelaChatController extends BaseController{
     @FXML
     private Button voltar;
     
-    
-    
+    public List<CadastroCliente> usuario;
 
+    
 
     @FXML
     void SendMessage(ActionEvent event) throws IOException {
         
         String remetente, mensagem, destinatario;
         
-        remetente = "lobatodepaulo";
+        remetente = LoginWindowController.nome;
         mensagem = MessageBox.getText();
         destinatario = "diogobatista";
         
@@ -93,9 +91,17 @@ public class TelaChatController extends BaseController{
         }    
     }
     
-    void ReceiveMessage(){
+    void CarregaMensagem(){
         
     }
+    
+    public List<CadastroCliente> buscaUsuario(String sql){
+        
+        
+        
+        return null;
+    }
+    
     
     @FXML
     void Voltar(ActionEvent event) {
