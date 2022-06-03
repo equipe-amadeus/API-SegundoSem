@@ -9,7 +9,7 @@
 |**Gustavo Konflanz Mezzomo**| Product Owner|<a href="https://github.com/gustavomezzomo" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="https://www.linkedin.com/in/gustavo-konflanz-mezzomo-08135320b/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 |**Gustavo Lobato de Paulo**| Scrum Master |<a href="https://github.com/Gustavoldp" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="https://www.linkedin.com/in/gustavo-lobato-8173a11b6/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 |**Diego Batista da Silva**| Desenvolvedor | <a href="https://github.com/diiegobsilva" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="https://www.linkedin.com/in/diegobatista1/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-|**Gabriele Stephanie Silva de Oliveira**| Desenvolvedor |<a href="https://github.com/oliveira-gabriele" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="https://www.linkedin.com/in/gabriele-oliveira-929317221" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>|
+|**Gabriele Stephanie Silva de Oliveira**| Desenvolvedora |<a href="https://github.com/oliveira-gabriele" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="https://www.linkedin.com/in/gabriele-oliveira-929317221" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>|
 |**Guilherme Konflanz Mezzomo**| Desenvolvedor | <a href="https://github.com/GuilhermeKMezzomo" target="_blanck"><img src = "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> |<a href="https://www.linkedin.com/in/guilherme-konflanz-mezzomo-0a9065216/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 
 ## Índice
@@ -50,10 +50,10 @@ Criar um sistema para centralizar a comunicação entre clientes e empresa.
 ## User Story
 | Quem | O que? | Para |
 |:--------------:  | :----------:|:---------------------------------------------------------:|
-| Desenvolvedor | Hospedar o banco de dados na nuvem. | Para uma comunicação padrão para todas as máquinas. |
-| Desenvolvedor | Desenvolver um sistema em JavaFx | Variedade de recursos e qualidade visual. |
-| Desenvolvedor | Validator | Identificar visualmente se existem campos inválidos. |
-| Desenvolvedor | CRUD | Para a manipulação dos itens no banco de dados. |
+| Desenvolvedor |  |  |
+| Desenvolvedor |  |  |
+| Desenvolvedor |  |  |
+| Desenvolvedor |  |  |
 
 ## Backlog do produto
 
@@ -81,7 +81,11 @@ Banco de dados Azure | Média prioridade
 ## Conexão do banco de dados com a interface
 <img width= "600" src="https://github.com/equipe-amadeus/API-SegundoSem/blob/main/gif/conexaobdinterface.gif">
 
-# Sprint 2
+## Sprint 2
+
+<img width= "600" src="https://github.com/equipe-amadeus/API-SegundoSem/blob/main/gif/sprint2.gif">
+
+## Sprint 3
 
 
 
@@ -102,6 +106,7 @@ Banco de dados Azure | Média prioridade
 
 ## 🛠️ Tecnologias Utilizadas 
 
+- BrModelo : Modelagem de Dados
 - CSS3 : Estilização
 - Figma : Prototipagem
 - Java : Linguagem de programação
