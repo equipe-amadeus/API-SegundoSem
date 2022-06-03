@@ -4,6 +4,10 @@
  */
 package modelo;
 
+import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 /**
  *
  * @author lobat
@@ -12,6 +16,7 @@ public class CadastroChat {
     public String remetente;
     public String mensagem;
     public String destinatario;
+    public LocalTime hora;
 
      public String getRemetente() {
         return remetente;

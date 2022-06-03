@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author diego
@@ -14,6 +16,7 @@ public class Cadastro_mensagem {
     private String categoria;
     private String conteudo;
     private String meio_comunicacao;
+
 
     public int getId_mensagem() {
         return id_mensagem;

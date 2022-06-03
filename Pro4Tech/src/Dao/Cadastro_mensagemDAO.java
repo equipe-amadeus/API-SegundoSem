@@ -9,7 +9,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.SimpleTimeZone;
 import javax.swing.JOptionPane;
 import modelo.Cadastro_mensagem;
 
@@ -23,10 +27,15 @@ public class Cadastro_mensagemDAO {
     PreparedStatement pstm;
     ResultSet rs;
     ArrayList<Cadastro_mensagem> lista = new ArrayList<>();
-
+    LocalDateTime data_hora;
+        
+    SimpleDateFormat formatoData = new SimpleDateFormat("dd/M/yyyy hh:mm");
+    String data = formatoData.format(new Date());
+    
+        
     public void cadastrar_mensagem(Cadastro_mensagem objcadastro_mensagem) {
 
-        String sql = "INSERT INTO mensagem(titulo, categoria, meio_comunicacao, conteudo) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO mensagem(titulo, categoria, meio_comunicacao, conteudo, data_hora) VALUES(?,?,?,?,?)";
 
         conn = new ConnectionFactory().conectaBD();
 
@@ -36,6 +45,7 @@ public class Cadastro_mensagemDAO {
             pstm.setString(2, objcadastro_mensagem.getCategoria());
             pstm.setString(3, objcadastro_mensagem.getMeio_comunicacao());
             pstm.setString(4, objcadastro_mensagem.getConteudo());
+            pstm.setString(5, data);
             pstm.execute();
             pstm.close();
 
@@ -43,7 +53,7 @@ public class Cadastro_mensagemDAO {
             JOptionPane.showMessageDialog(null, "Cadastro_mensagemDAO" + erro);
         }
     }
-
+    
     public ArrayList<Cadastro_mensagem> ListarMensagem() {
         String sql = "SELECT * FROM mensagem";
         conn = new ConnectionFactory().conectaBD();
@@ -58,7 +68,6 @@ public class Cadastro_mensagemDAO {
                 objCadastro_mensagem.setMeio_comunicacao(rs.getString("meio_comunicacao"));
                 objCadastro_mensagem.setTitulo(rs.getString("titulo"));
                 objCadastro_mensagem.setConteudo(rs.getString("conteudo"));
-
                 lista.add(objCadastro_mensagem);
             }
         } catch (SQLException erro) {

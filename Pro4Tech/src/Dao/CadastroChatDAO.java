@@ -8,6 +8,9 @@ import Factory.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
 import modelo.CadastroChat;
@@ -24,7 +27,10 @@ public class CadastroChatDAO {
     
     public void Cadastrar(CadastroChat objChat){
         
-        String sql = "INSERT INTO chat(remetente, mensagem, destinatario) VALUES(?,?,?)";
+        SimpleDateFormat formatoData = new SimpleDateFormat("hh:mm");
+        String hora = formatoData.format(new Date());
+        
+        String sql = "INSERT INTO chat(remetente, mensagem, destinatario, hora) VALUES(?,?,?,?)";
         
         conn = new ConnectionFactory().conectaBD();
         
@@ -33,6 +39,7 @@ public class CadastroChatDAO {
             pstm.setString(1, objChat.getRemetente());
             pstm.setString(2, objChat.getMensagem());
             pstm.setString(3, objChat.getDestinatario());
+            pstm.setString(4, hora);
             pstm.execute();
             pstm.close();
         }catch(SQLException erro){
