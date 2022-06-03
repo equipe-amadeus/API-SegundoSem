@@ -14,7 +14,7 @@ public class ConnectionFactory {
         Connection conn= null;
         
         try {
-            String url = "jdbc:mysql://serveprojeto.mysql.database.azure.com:3306/pro4tech?user=myadimin_api&password= fatec@123";
+            String url = "jdbc:mysql://bd-pro4tech.mysql.database.azure.com:3306/pro4tech?user=myadimin_api&password= fatec@123";
             conn = DriverManager.getConnection(url);
             
         } catch (SQLException erro) {

@@ -20,7 +20,7 @@ public class CadastroClienteDAO {
     static PreparedStatement pstm;
 
     public void cadastrar(CadastroCliente objcadastro) {
-        String sql = "INSERT INTO cadastro(cargo, nome, email, nome_empresa, projetos, telefone, senha, token) VALUES(?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO cadastro(cargo, nome, email, nome_empresa, projetos, telefone, senha) VALUES(?,?,?,?,?,?,?)";
 
         conn = new ConnectionFactory().conectaBD();
 
@@ -33,7 +33,6 @@ public class CadastroClienteDAO {
             pstm.setString(5, objcadastro.getProjetos());
             pstm.setString(6, objcadastro.getTelefone());
             pstm.setString(7, objcadastro.getSenha());
-            pstm.setString(8, criaToken());
             pstm.execute();
             pstm.close();
 
