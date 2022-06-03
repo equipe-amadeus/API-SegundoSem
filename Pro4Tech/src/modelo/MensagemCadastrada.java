@@ -14,7 +14,6 @@ public class MensagemCadastrada {
     private String mensagem;
     private String tipo;
     private String meio;
-    private String data;
 
     public String getNome() {
         return nome;

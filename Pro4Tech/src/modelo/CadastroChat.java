@@ -16,7 +16,6 @@ public class CadastroChat {
     public String remetente;
     public String mensagem;
     public String destinatario;
-    public LocalTime hora;
 
      public String getRemetente() {
         return remetente;
