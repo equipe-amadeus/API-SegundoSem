@@ -27,7 +27,7 @@ public class CadastroChatDAO {
     
     public void Cadastrar(CadastroChat objChat){
         
-        SimpleDateFormat formatoData = new SimpleDateFormat("hh:mm");
+        SimpleDateFormat formatoData = new SimpleDateFormat("hh:mm:ss");
         String hora = formatoData.format(new Date());
         
         String sql = "INSERT INTO chat(remetente, mensagem, destinatario, hora) VALUES(?,?,?,?)";
