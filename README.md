@@ -50,10 +50,10 @@ Criar um sistema para centralizar a comunicação entre clientes e empresa.
 ## User Story
 | Quem | O que? | Para |
 |:--------------:  | :----------:|:---------------------------------------------------------:|
-| Desenvolvedor |  |  |
-| Desenvolvedor |  |  |
-| Desenvolvedor |  |  |
-| Desenvolvedor |  |  |
+| Desenvolvedor | Gostaria de uma interface mais intuitiva | Para facilitar a navegação do usuário |
+| Desenvolvedor | Gostaria de indicações visuais para eventuais erros durante o uso da aplicação | Para melhorar a experiência do usuário |
+| Desenvolvedor | Gostaria de um sistema de registro de mensagens mais simples | Para que os usuários sintam facilidade ao usar a plataforma |
+| Desenvolvedor | Gostaria de hospedar o banco de dados de forma remota | Para facilitar a comunicação os desenvolvedores durante os testes |
 
 ## Backlog do produto
 
@@ -103,11 +103,13 @@ Banco de dados Azure | Média prioridade
   - Chat.
 
 * Sprint 3 (16/05/2022 - 05/06/2022) 
+  - Máscaras e finalização dos validators;
+  - Melhorias no design do programa requisitadas pelo cliente;
+  - Relatórios.
 
 ## 🛠️ Tecnologias Utilizadas 
 
 - BrModelo : Modelagem de Dados
-- CSS3 : Estilização
 - Figma : Prototipagem
 - Java : Linguagem de programação
 - JavaFx : Framework
@@ -115,4 +117,5 @@ Banco de dados Azure | Média prioridade
 - Microsoft Azure : Hospedagem na nuvem
 - MySQL : Banco de Dados
 - Scene Builder : Ferramenta para edição do layout
+- IText criação de relatórios
  
