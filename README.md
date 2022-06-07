@@ -87,7 +87,7 @@ Banco de dados Azure | Média prioridade
 
 ## Sprint 3
 
-<img width="600" src="https://github.com/equipe-amadeus/API-SegundoSem/blob/main/gif/Imagem1.png">
+<img width="600" src="[https://github.com/equipe-amadeus/API-SegundoSem/blob/main/gif/Imagem1.png](https://github.com/equipe-amadeus/API-SegundoSem/blob/main/gif/vidapresentacao3.gif)">
 
 ## Entregas
 
