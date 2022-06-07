@@ -10,6 +10,7 @@ module Pro4Tech {
         requires mysql.connector.java;
     requires java.logging;
     requires java.base;
+    requires javafx.swing;
 	
 	opens fxml;
 	opens controllers;

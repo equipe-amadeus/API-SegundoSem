@@ -2,7 +2,6 @@ package controllers;
 
  
 import Dao.CadastroClienteDAO;
-import static Dao.CadastroClienteDAO.criaToken;
 import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -135,7 +134,7 @@ public class TelaCadastroClienteController extends BaseController{
           Projeto.setStyle(successStyle);
           Telefone.setStyle(successStyle);
           Senha.setStyle(successStyle);
-          String cargo, nome, email, nome_empresa, projetos, telefone, senha, token;
+          String cargo, nome, email, nome_empresa, projetos, telefone, senha;
                   
                   cargo = (String) Cargo.getValue();
                   nome = Nome.getText();
@@ -144,7 +143,6 @@ public class TelaCadastroClienteController extends BaseController{
                   projetos = Projeto.getText();
                   telefone = Telefone.getText();
                   senha = Senha.getText();
-                  token = criaToken();
 
                   CadastroCliente objcadastro = new CadastroCliente();
                   objcadastro.setCargo(cargo);
@@ -154,7 +152,6 @@ public class TelaCadastroClienteController extends BaseController{
                   objcadastro.setProjetos(projetos);
                   objcadastro.setTelefone(telefone);
                   objcadastro.setSenha(senha);
-                  objcadastro.setToken(token);
 
                   CadastroClienteDAO objcadastrodao = new CadastroClienteDAO();
                   objcadastrodao.cadastrar(objcadastro);

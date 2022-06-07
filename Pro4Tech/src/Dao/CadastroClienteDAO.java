@@ -9,13 +9,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Random;
 import javax.swing.JOptionPane;
 import modelo.CadastroCliente;
 
 public class CadastroClienteDAO {
 
-    static String token;
     static Connection conn;
     static PreparedStatement pstm;
 
@@ -64,20 +62,6 @@ public class CadastroClienteDAO {
     }
     
     
-    
-    public static String criaToken(){
-        
-        Random random = new Random();
-        int numero;
-        do{
-            numero = random.nextInt();
-        }while(numero < 0);
-        
-        CadastroClienteDAO.token = String.valueOf(numero);
-        
-        return CadastroClienteDAO.token;
-        
-    }
     public static String buscaNome(String email){
         
         Connection conn = new ConnectionFactory().conectaBD();

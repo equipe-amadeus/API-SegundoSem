@@ -16,15 +16,6 @@ public class CadastroCliente {
     private String projetos;
     private String telefone;
     private String senha;
-    private String token;
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public String getToken() {
-        return token;
-    }
 
     public String getSenha() {
         return senha;
